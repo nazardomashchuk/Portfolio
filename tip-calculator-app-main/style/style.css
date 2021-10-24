@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body{
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+}
+header{
+    text-align: center;
+    padding-top: 100px;
+}
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;;
+}
+main{
+    background-color: white;
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px 30px 30px 40px;
+    border-radius: 20px;
+}
+
+/* result section */
+
+.result{
+    background-color: hsl(183, 100%, 15%);
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+}
+.amount, .total{
+    display: flex;
+    justify-content: space-between;
+}
+.reset_btn{
+    text-align: center;
+}
+.reset{
+    font-family: 'Space Mono', monospace;
+    margin-top: 100px;
+    width: 100%;
+    text-decoration: none;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    height: 35px;
+    border-radius: 4px;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.tip_result, .total_result{
+    font-size: 42px;
+    color: hsl(172, 67%, 45%);
+    margin-top: 5px;
+}
+.rs_bottom{
+    margin-top: 5px;
+    color: hsl(184, 14%, 56%);
+    font-size: 0.9em;
+}
+.rs_top{
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+/* left setion */
+
+.enter_data{
+    max-width: 100%;
+}
+.enter_text{
+    color: hsl(186, 14%, 43%);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.text{
+    width: 95%;
+    padding: 10px 20px 10px 0;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-size: 1.2em;
+    outline: hsl(172, 67%, 45%);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 15px;
+    text-align: right;
+}
+.enter_bill{
+    background-image: url(../images/icon-dollar.svg);
+}
+.number_input{
+    background-image: url(../images/icon-person.svg);
+}
+
+/* Tips */
+
+.tips{
+    display: grid;
+    grid-template-columns: repeat(3, 30.5%);
+    gap: 15px;
+}
+.btn{
+    border: none;
+    background-color: hsl(183, 100%, 15%);
+    padding: 5px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 4px;
+    transition: 250ms;
+}
+.custom_placeholder{
+    border: none;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-size: 1.2em;
+    outline: none;
+    text-align: center;
+    background-color: hsl(189, 41%, 97%);
+}
+.tip, .people{
+    margin-top: 50px;
+}
+
+/* hover & active */
+
+.btn:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.reset:hover{
+    background-color: hsl(185, 41%, 84%);
+}
+
+/* adaptive */
+
+@media screen and (max-width: 800px) {
+    .enter_data{
+        width: 40%;
+}
+
+@media screen and (max-width: 680px) {
+    main{
+        display: block;
+        padding-left: 10px;
+    }
+    .enter_data{
+        width: 100%;
+    }
+    .result{
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 10px;
+    }
+    .reset{
+        margin-top: 10px;
+    }
+}
