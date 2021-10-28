@@ -8,7 +8,6 @@ let enterBill = document.querySelector('.enter_bill'),
     total = document.querySelector('.total_result'),
     resetButton = document.querySelector('.reset'),
     res,
-    resultTotal,
     tipButtonVal = 1;
 
     
@@ -36,8 +35,11 @@ function totalResult() {
     if (enterBill.value == '' || numberPeople.value == '') {
         total.innerHTML = '$0.00';
     } else {
-        total.innerHTML = '$' + (enterBill.value * tipButtonVal) / numberPeople.value;
-        res = (enterBill.value * tipButtonVal - enterBill.value) / numberPeople.value;
+        let totalResult = +((enterBill.value * tipButtonVal) / numberPeople.value);
+        totalResult = totalResult.toFixed(2);
+        total.innerHTML = '$' + totalResult;
+        res = +((enterBill.value * tipButtonVal - enterBill.value) / numberPeople.value);
+        res = res.toFixed(2);
         amount.innerHTML = '$' + res;
     }
 }
